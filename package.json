@@ -1,0 +1,22 @@
+{
+  "name": "transformice-executable-mac",
+  "version": "1.0.0",
+  "description": "Transformice MacOS Standalone",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/atelier801/transformice-executable-mac",
+  "keywords": [
+    "Transformice",
+    "Electron",
+    "standalone",
+    "macos",
+    "flash"
+  ],
+  "author": "Atelier801",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^10.1.5"
+  }
+}
