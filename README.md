@@ -11,3 +11,9 @@ npm install
 npm start
 ```
 Distribution instructions can be found in the electron documentation [(here)](https://www.electronjs.org/docs/tutorial/application-distribution). We recommend the [v10.1.5 binaries](https://github.com/electron/electron/releases/tag/v10.1.5).
+
+## Build
+```bash
+npx @electron-forge/cli@latest import
+npm run start
+```
