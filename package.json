@@ -21,52 +21,39 @@
   ],
   "author": "Atelier801",
   "license": "CC0-1.0",
-  "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "electron": "^10.1.5"
-  },
   "bugs": {
     "url": "https://github.com/atelier801/transformice-executable-mac/issues"
   },
   "homepage": "https://github.com/atelier801/transformice-executable-mac#readme",
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^10.2.0"
   },
   "config": {
     "forge": {
       "packagerConfig": {
-		"name": "Transformice",
+        "name": "Transformice",
         "icon": "res/icone.icns",
-		"osxSign": {
-			"identity": "Atelier 801",
-			"entitlements": "mac/entitlements.plist",
-			"entitlements-inherit": "mac/entitlements.plist"
-		},
+        "osxSign": {
+          "identity": "Atelier 801",
+          "entitlements": "mac/entitlements.plist",
+          "entitlements-inherit": "mac/entitlements.plist"
+        }
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "transformice_executable_mac"
-          }
+          "name": "@electron-forge/maker-dmg",
+          "platforms": [
+            "darwin"
+          ]
         },
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
             "darwin"
           ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
         }
       ]
     }
