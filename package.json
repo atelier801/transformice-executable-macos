@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@electron-forge/publisher-github": "^6.0.0-beta.54",
     "electron": "^10.2.0"
   },
   "config": {
@@ -54,6 +56,21 @@
           "platforms": [
             "darwin"
           ]
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "platforms": [
+            "darwin"
+          ],
+          "config": {
+            "repository": {
+              "owner": "atelier801",
+              "name": "transformice-executable-macos"
+            },
+            "prerelease": true
+          }
         }
       ]
     }

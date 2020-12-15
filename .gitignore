@@ -5,6 +5,9 @@ coverage/coverage.json
 node_modules
 package-lock.json
 
+# electron-forge output dir
+out
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
