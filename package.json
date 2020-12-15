@@ -39,7 +39,13 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "res/icone.icns"
+		"name": "Transformice",
+        "icon": "res/icone.icns",
+		"osxSign": {
+			"identity": "Atelier 801",
+			"entitlements": "mac/entitlements.plist",
+			"entitlements-inherit": "mac/entitlements.plist"
+		},
       },
       "makers": [
         {
