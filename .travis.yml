@@ -1,0 +1,23 @@
+language: node_js
+node_js: "10"
+os:
+- osx
+osx_image: xcode10.1
+
+cache:
+  npm: true
+  directories:
+  - $HOME/.cache/electron
+
+addons:
+  apt:
+    packages:
+    - fakeroot
+    - rpm
+
+branches:
+  only:
+  - main
+
+script:
+- npm run publish

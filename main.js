@@ -11,7 +11,9 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 622, // we have to account for top bar size too
+    height: 600,
+    useContentSize: true,  // make width & height relative to the content, not the whole window
+    backgroundColor: "#6A7495",
     webPreferences: {
       plugins: true
     }

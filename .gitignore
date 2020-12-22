@@ -1,0 +1,21 @@
+# JSON version of coverage report
+coverage/coverage.json
+
+# Installed npm modules
+node_modules
+package-lock.json
+
+# electron-forge output dir
+out
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
